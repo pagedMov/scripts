@@ -1,0 +1,1 @@
+This script monitors the current system volume using "pactl subscribe". The output is formatted as a single integer between 0 and 100, I docked the percent sign to increase the potential compatibility of the output.
