@@ -22,7 +22,7 @@ if [ "$arg" == "--listen" ]; then
 					if [ "$line_num" -lt "$num_lines" ]; then
 						echo -n ", "
 					else
-						echo "}"
+						echo ", \"status\":\"$(playerctl status)\"}"
 					fi
 				fi
 			done <<< "$metadata"
@@ -43,7 +43,7 @@ else
 			if [ "$line_num" -lt "$num_lines" ]; then
 				echo -n ", "
 			else
-				echo "}"
+				echo ", \"status\":\"$(playerctl status)\"}"
 			fi
 		fi
 	done <<< "$metadata"
